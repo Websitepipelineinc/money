@@ -204,7 +204,7 @@ namespace money
             {
                 // There was no logical match for this currency in the current culture;
                 // choose the most used equivalent for the native country as a fallback
-                locale = locales.LastOrDefault();
+                locale = locales.FirstOrDefault();
                 if (locale != null)
                 {
                     fallbackCulture = locale.Culture;
