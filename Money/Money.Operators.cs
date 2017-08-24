@@ -37,7 +37,7 @@ namespace money
         {
             return left._units == right._units &&
                    left._places == right._places &&
-                   left._currencyInfo == right._currencyInfo;
+                   left.CurrencyInfo == right.CurrencyInfo;
         }
 
         public static bool operator !=(Money left, Money right)
@@ -73,13 +73,13 @@ namespace money
 
             HarmonizeDecimalPlaces(ref left, ref right);
 
-            var product = Convert.ToDouble(left._units)*Convert.ToDouble(right._units);
+            var product = Convert.ToDouble(left._units) * Convert.ToDouble(right._units);
 
-            var factor = Math.Pow(10, left._places*2);
+            var factor = Math.Pow(10, left._places * 2);
 
             product /= factor;
 
-            var result = new Money(left._currencyInfo, product);
+            var result = new Money(left.CurrencyInfo, product);
 
             return result;
         }
@@ -90,9 +90,9 @@ namespace money
 
             HarmonizeDecimalPlaces(ref left, ref right);
 
-            var quotient = Convert.ToDouble(left._units)/Convert.ToDouble(right._units);
+            var quotient = Convert.ToDouble(left._units) / Convert.ToDouble(right._units);
 
-            var result = new Money(left._currencyInfo, quotient);
+            var result = new Money(left.CurrencyInfo, quotient);
 
             return result;
         }

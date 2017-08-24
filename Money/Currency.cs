@@ -1,57 +1,66 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace money
 {
     /// <summary>
-    /// Represents world currency by numeric and alphabetic values, as per ISO 4217:
-    /// http://www.iso.org/iso/currency_codes_list-1. This enum is implicitly converted
-    /// to <see cref="CurrencyInfo" /> instances internally, so you only need to reference this
-    /// enum to work with rich currency objects. 
+    ///     Represents world currency by numeric and alphabetic values, as per ISO 4217:
+    ///     http://www.iso.org/iso/currency_codes_list-1. This enum is implicitly converted
+    ///     to <see cref="CurrencyInfo" /> instances internally, so you only need to reference this
+    ///     enum to work with rich currency objects.
     /// </summary>
     [Serializable]
+    [SuppressMessage("ReSharper", "InconsistentNaming")]
     public enum Currency : ushort
     {
         /// <summary>
-        /// USD
+        ///     USD
         /// </summary>
         USD = 840,
+
         /// <summary>
-        /// CAD
+        ///     CAD
         /// </summary>
         CAD = 124,
+
         /// <summary>
-        /// EUR
+        ///     EUR
         /// </summary>
         EUR = 978,
+
         /// <summary>
-        /// AUD
+        ///     AUD
         /// </summary>
         AUD = 036,
+
         /// <summary>
-        /// GBP
+        ///     GBP
         /// </summary>
         GBP = 826,
+
         /// <summary>
-        /// INR
+        ///     INR
         /// </summary>
         INR = 356,
+
         /// <summary>
-        /// JPY
+        ///     JPY
         /// </summary>
         JPY = 392,
+
         /// <summary>
-        /// CHF
+        ///     CHF
         /// </summary>
         CHF = 756,
+
         /// <summary>
-        /// NZD
+        ///     NZD
         /// </summary>
         NZD = 554,
 
         /// <summary>
-        /// DKK
+        ///     DKK
         /// </summary>
         DKK = 208
-
     }
 }
