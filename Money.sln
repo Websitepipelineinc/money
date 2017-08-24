@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money", "Money\Money.csproj", "{4C4E2CE7-F299-47D7-9B67-A68C6D75A05E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money.Tests", "Money.Tests\Money.Tests.csproj", "{0C09EBAC-2B4E-432A-83ED-DB4D0381426F}"
@@ -8,7 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C095E92-F5B3-4A32-ADE6-B33E74761397}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.md = LICENSE.md
-		money.nuspec = money.nuspec
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -29,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18843BF7-9C31-48F1-924C-71FE524A109D}
 	EndGlobalSection
 EndGlobal
