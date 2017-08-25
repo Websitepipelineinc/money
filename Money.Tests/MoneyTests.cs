@@ -398,5 +398,16 @@ namespace money.Tests
                 Console.WriteLine(total);
             });
         }
+
+        [Test]
+        public void Creation_time_affects_Equals_override_not_equality_operator()
+        {
+            var first = new Money(10);
+            Thread.Sleep(5);
+            var second = new Money(10);
+
+            Assert.IsFalse(first.Equals(second));
+            Assert.IsTrue(first == second);
+        }
     }
 }
